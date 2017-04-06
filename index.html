@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Примитивный редактор табличных данных</title>
+  <link href="css/styles.css" rel="stylesheet">
+
+ </head>
+ <body>
+      <div class = "container">
+          <div class = "header"><h1>Редактор табличных данных</h1></div>
+          <div class = "content">
+              <div class = "button_panel">
+                  <input type = "button" value="Add" name ="add" id="add"></input>
+                  <input type = "button" value="Change" name ="change"></input>
+                  <input type = "button" value="Delete" name ="delete"></input>
+              </div>
+              <div class = "table_container">
+                  <table id = "table">
+                        <tr class = "first">
+                          <th>NAME</th>
+                          <th>VALUE</th>
+                        </tr>
+                        <tr class = "first">
+                          <td>
+                            <input id = "name_input"></input>
+                          </td>
+                          <td>
+                            <input id = "value_input"></input>
+                          </td>
+                        </tr>
+
+
+                  </table>
+                </div>
+
+            </div>
+            <div class = "footer"><script src="js/script.js"></script></div>
+      </div>
+ </body>
+</html>
