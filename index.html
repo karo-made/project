@@ -3,39 +3,48 @@
  <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <title>Примитивный редактор табличных данных</title>
-  <link href="css/styles.css" rel="stylesheet">
+  <link href="styles.css" rel="stylesheet">
 
  </head>
  <body>
       <div class = "container">
-          <div class = "header"><h1>Редактор табличных данных</h1></div>
-          <div class = "content">
-              <div class = "button_panel">
-                  <input type = "button" value="Add" name ="add" id="add"></input>
-                  <input type = "button" value="Change" name ="change"></input>
-                  <input type = "button" value="Delete" name ="delete"></input>
-              </div>
+          <div class = "header">
+            <h1>Редактор табличных данных</h1>
+            <p>Реализован следующий функционал:
+              <ul>
+                <li>Просмотр, добавление <button class="btn">Add</button>, изменение, удаление данных <button class="btn">Delete</button>, в том числе изменение порядка записей  <button class="btn">↑</button><button class="btn">↓</button>.</li>
+                <li>Загрузку и обновление данных из textarea в формате JSON по нажатию <button class="btn">Import Data</button>.</li>
+                <li>Выгрузку данных обратно в textarea по нажатию  <button class="btn">Export Data</button>.</li>
+              </ul>
+            </p>
+          </div>
+          <div class = "main_container">
               <div class = "table_container">
                   <table id = "table">
-                        <tr class = "first">
+                        <tr>
                           <th>NAME</th>
                           <th>VALUE</th>
+                          <th></th>
+                          <th></th>
+                          <th><input class="btn" type="button" id="add" value="Add" onclick="addRow()"></input></th>
                         </tr>
-                        <tr class = "first">
-                          <td>
-                            <input id = "name_input"></input>
-                          </td>
-                          <td>
-                            <input id = "value_input"></input>
-                          </td>
+                        <tr class="table_row">
+                            <td contenteditable="true" class="name_input"></td>
+                            <td contenteditable="true" class="value_input"></td>
+                            <td><input class="btn" type="button" id="delete" value="Delete" onclick="deleteRow(this)"></input></td>
+                            <td><input class="btn" type="button" id="up" value="↑" onClick="rowUp(this)"></input><input class="btn" type="button" id="down" value="↓" onClick="rowDown(this)"></input></td>
+                            <td></td>
                         </tr>
-
-
                   </table>
-                </div>
-
-            </div>
-            <div class = "footer"><script src="js/script.js"></script></div>
-      </div>
+              </div>
+          <div class = "textarea_container">
+            <textarea id="export" rows="10" cols="45"></textarea>
+            <br>
+            <input class="btn" type="button" id="export-btn" value="Export Data" onclick="exportData()"></input>
+            <input class="btn" type="button" id="import-btn" value="Import Data" onclick="importData()"></input>
+          </div>
+    </div>
+  </div>
+    <div class = "footer"><script src="script.js"></script></div>
  </body>
 </html>

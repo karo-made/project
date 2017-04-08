@@ -1,0 +1,47 @@
+body{
+width:100%;
+}
+#table{
+width:100%;
+border-collapse: collapse;
+border-bottom:1px solid #dddddd;
+}
+.table_container{
+  min-width: 600px;
+  width:65%;
+  float:left;
+}
+.textarea_container{
+  width:20%;
+  float:left;
+  padding-left:50px;
+}
+.textarea_container > button{
+  margin:5px;
+  margin-left: 0px;
+}
+.btn{
+  padding-top:5px;
+  padding-bottom: 5px;
+}
+
+tr{
+height: 50px;
+border-top:1px solid #dddddd;
+
+}
+td {
+  padding-left: 20px;
+}
+th{
+text-align: left;
+padding-left: 20px;
+}
+#add{
+  float:right;
+  margin-right: 10px;
+}
+#delete{
+  float:right;
+  margin-right: 10px;
+}
